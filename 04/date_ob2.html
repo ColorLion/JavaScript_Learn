@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date2</title>
+    <script>
+        document.write("<h1>오늘 날짜 정보</h1>");
+        today = new Date();
+        nowYear = today.getFullYear();
+        theDay = new Date(nowYear, 11, 31);
+        diffDate = theDay.getTime() - today.getTime();
+        result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+
+        document.write("연말 D-Day: " + result + "일 남았다");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
