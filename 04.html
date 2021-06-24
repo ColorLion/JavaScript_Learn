@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Object
+            // Object construction(key: value): 객체 생성
+            // 1.
+            var grades1 = {'dohee': 20, 'Mwoo': 10, 'penzi': 5};
+            // 2.
+            var grades2 = new Object();
+            grades2['dohee'] = 20;
+            grades2['Mwoo'] = 10;
+            grades2['penzi'] = 5;
+            
+            // Object Modifier : 객체 접근자
+            // 1.
+            alert(grades1['dohee']);
+            // 2.
+            alert(grades2.Mwoo);
+
+            // Loop for object
+            for(key in grades1){
+                document.write("key: " + key + "value: " + grades1[key] + "<br>");
+            }
+            // 객체는 객체를 담을수도, 함수를 담을 수 도 있다
+            var MyLoves = {
+                'list': {'dohee': 20, 'Mwoo': 10, 'penzi': 5},
+                'show': function(){
+                    for(var name in this.list){
+                        document.write(name + ':' + this.list[name] + '<br>');
+                    }
+                }
+            }
+            document.write("<br>Object in object and function <br>");
+            MyLoves.show();
+        </script>
+    </body>
+</html>

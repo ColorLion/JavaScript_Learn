@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // ==  동등 연산자
+            alert(1 == 2);
+            // === 일치 연산자
+            alert(1 === 2);
+            // !=: 부정
+            // !==: 정확하게 같지 않다
+
+            // 차이점
+            alert(1 == '1');  // ture
+            alert(1 === '1'); // false
+
+            // 주의사항
+            // null: 값이 없음을 명시적으로 표현
+            // undefined: 값이 없는 상태
+            // NaN: 0/0 같은 연산으로 만들어지는 특수한 데이터 형, 숫자가 아니라는 뜻
+            alert(null == undefined);   // 
+            alert(null === undefined);  
+            alert(true == 1);           
+            alert(true === 1);          
+            alert(true == '1');         
+            alert(true === '1');        
+            
+            alert(0 === -0);            
+            alert(NaN === NaN);         
+
+
+        </script>
+    </body>
+</html>
