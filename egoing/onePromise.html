@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="
+        // promise 실행
+        console.log('promise 시작');
+        let bStatus = Math.random() > 0.5;
+        fnCreatePromise(bStatus)
+            // 비동기 실행으로 결과를 알려줌
+            .then(pResult => console.log(pResult))
+            .catch(pErrMsg => console.error(pErrMsg));
+        console.log('promise 종료!')
+    ">상품 배송 시작!</button>
+
+    <script>
+        //promise 생성
+        function fnCreatePromise(pStatus){
+            return new Promise((fnResolve, fnReject) => {
+                // 상품 준비를 확인하는 비동기함수 실행
+                setTimeout(() => {
+                    // 상품 준비 결과는 랜덤
+                    if (pStatus) fnResolve('상품이 성공적으로 배송됨');
+                    else fnReject('sry');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+
+</html>

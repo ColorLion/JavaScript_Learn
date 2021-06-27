@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="
+        // promise로 비동기 함수를 순서대로실행
+        fnProductReady(1, 2000)
+            .then((pResult1) => {
+                console.log(pResult1);
+                return fnProductReady(2, 1000);
+            })
+            .then((pResult2) =>{
+                console.log(pResult2);
+                return fnProductReady(3, 500);
+            })
+            .then((pResult3) => console.log(pResult3));
+    ">Promise: 상품 배송 시작~</button>
+
+    <script>
+        // promise로 비동기함수 생성
+        function fnProductReady(pNum, pTime){
+            return new Promise((fnResolve) =>{
+                setTimeout(() =>{
+                    console.log(pNum);
+                    fnResolve('상품이 성공적으로 배송되었음');
+                }, pTime);
+            });
+        }
+    </script>
+</body>
+
+</html>

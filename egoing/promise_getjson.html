@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="
+    //JSON 로컬 텍스트 표시
+    fetch('./data.json')
+        .then(pResponse => pResponse.text())
+        .then(pJSON => console.log(pJSON));
+    ">JSON 로컬 읽기</button>
+    <button onclick="
+    //JSON 원격 텍스트 표시
+    fetch('https://cors-anywhere.herokuapp.com/' + 'https://jsonplaceholder.typicode.com/posts/1')
+        .then(pResponse => pResponse.text())
+        .then(pJSON => console.log(pJSON));
+    ">JSON 원격 읽기</button>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="fnDoAsyncFunc()">async, await: 상품배송 시작</button>
+
+    <script>
+        // await으로 비동기 함수 순서대로 실행
+        // promise보다 소스가 간결하고 가독성 잇음
+        async function fnDoAsyncFunc(){
+            console.log(await fnProductReady(1, 2000));
+            console.log(await fnProductReady(2, 1000));
+            console.log(await fnProductReady(3, 500));
+        }
+
+        function fnProductReady(pNum, pTime) {
+            return new Promise((resolve) => {
+                setTimeout(() =>{
+                    console.log(pNum);
+                    resolve('상품이 성공적으로 배송됨');
+                },pTime);
+            });
+        }
+    </script>
+</body>
+
+</html>
