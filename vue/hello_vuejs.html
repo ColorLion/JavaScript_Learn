@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="main">
+        <!-- sTitle 값을 받아 HTML의 엘리먼트 값으로 반환하여 표시 -->
+        <!-- 이를 머스태시 라고 함 -->
+        <!-- 변수나 함수의 결과 값을 html의 엘리먼트 값으로 변환해 브라우저에 출력 -->
+        <p>{{ sTitle }}</p>
+    </div>
+    <script>
+        // vue 객체를 생성해 앱을 초기화 하고 시작
+        new Vue({
+            // 속성에 main으로 div 엘리먼트 부분을 연결하겠다
+            el: '#main',
+            // 뷰 안에서 사용할 데이터를 변수명으로 선언해 관리
+            data: {
+                // {{ sTitle }}로 데이터 값 전달
+                sTitle: "안녕하쇼"
+            }
+        });
+    </script>
+</body>
+</html>
