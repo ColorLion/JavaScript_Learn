@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ sTitle }}</h1>
+        <!-- 버튼을 누르면 fnChangeTitle 메서드로 이벤트 핸들러 수행 -->
+        <button v-on:click="fnChangeTitle">눌러 텐련아</button>
+        <button v-on:click="fnReload">눌러 텐련아</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            sTitle: '안녕하슈'
+        },
+        methods: {
+            fnChangeTitle(){
+                this.sTitle = 'hello'
+            },
+            fnReload(){
+                this.sTitle = 'ni hao'
+            }
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id='main'>
+        <h1>좋아하는 과일은?</h1>
+        <ol>
+            <!-- v-for를 통해 반복문으로 aFruits 과일 배열 데이터를 가져옴-->
+            <h1>a Fruits</h1>
+            <li v-for="item in aFruits">
+                {{ item.sFruitName }}
+            </li>
+        </ol>
+    </div>
+    <script>
+        var main = new Vue({
+            el: '#main',
+            data: {
+                //과일 이름으로 이루어진 aFruits  배열
+                // json 형식을 사용하기 위함인듯
+                aFruits:[
+                { sFruitName: '사과'},
+                { sFruitName: '오렌지'},
+                { sFruitName: '포도'},
+                { sFruitName: '배'},
+                { sFruitName: '멀미'},
+                { sFruitName: '심하면'},
+                { sFruitName: '구토함'},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

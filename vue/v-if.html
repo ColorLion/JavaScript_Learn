@@ -6,6 +6,20 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-    
+    <div id="app">
+        <h1>{{ bFlag }}</h1>
+        <!-- v-if v-else로 직접 bFlag데이터에 접근해 조건 판단 -->
+        <p v-if="bFlag == true">앞</p>
+        <p v-else>앞</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                // 난수(0~1) 생성 후 0보다 크면 true, 아니면 false
+                bFlag: Math.random() > 0.5
+            }
+        })
+    </script>
 </body>
 </html>
