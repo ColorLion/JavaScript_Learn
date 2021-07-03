@@ -7,4 +7,32 @@
 </head>
 
 <body>
+    <div id='main'>
+        <p>클릭 숫자: {{ nClick }}</p>
+        <p>카운트 다운: {{ fnCounter }}</p>
+        <!-- 버튼을 누르면 fnIncrement 매서드 실행 -->
+        <button v-on:click="fnIncrement">누르면 안대~</button>
+        <button v-on:click="fnReset">가버렷</button>
+    </div>
 </body>
+<script>
+    new Vue({
+        el: '#main',
+        data:{
+            nClick: 0
+        },
+        computed:{
+            fnCounter(){
+                return 10 - this.nClick;
+            }
+        },
+        methods:{
+            fnIncrement(){
+                this.nClick++;
+            },
+            fnReset(){
+                this.nClick = 0;
+            }
+        }
+    });
+</script>
