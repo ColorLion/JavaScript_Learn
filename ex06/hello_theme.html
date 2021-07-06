@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <v-app>
+            <!-- 앱바 색상을 파라낵으로 설정하고 fixed로 고정 -->
+            <v-app-bar app color="primary" dark fixed>
+                <!-- 왼쪽에 메뉴 아이콘 넣음 -->
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                <v-toolbar-title>죽일까 마스터? 페이지</v-toolbar-title>
+                <!-- 오른쪽에 추가 메뉴 아이콘을 넣음-->
+                <v-spacer></v-spacer>
+                <v-btn icon>
+                    <v-icon>mdi-dots-vertical</v-icon>
+                </v-btn>
+            </v-app-bar>
+            <v-content>
+                <v-container>
+                    <!-- display-1/3 body-1/2 타이포그래피 서체 종류와 크기로 설정-->
+                    <h1 class="display-1 my-5">hi</h1>
+                    <!--my-4 상하 안쪽여백 설정-->
+                    <p class="body-2 my-4">죽일까 마스터? 페이지입니다.</p>
+                    <v-divider></v-divider>
+                    <h1 class="display-3 my-4">hello</h1>
+                    <p class="body-1 my-4">참아</p>
+                </v-container>
+            </v-content>
+            <!-- footer -->
+            <v-footer color="secondary" dark fixed>
+                <div class="mx-auto">Copyright &copy; colorlion</div>
+            </v-footer>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>
