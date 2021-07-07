@@ -9,9 +9,36 @@
 </head>
 
 <body>
-    
+    <div id="app">
+      <v-app>
+        <v-content>
+          <!--카드 ui사용-->
+          <v-card max-width="400">
+            <v-img src="https://picsum.photos/id/1068/400/300" aspect-ratio="2.3"></v-img>
+          </v-card>
+          <v-card-text>
+            <div>
+              <!--제목의 타이포그래피 스타일 설정-->
+              <h2 class="title primary--text mb-2">글로리아</h2>
+              s10 s14 s17 d16 d18 s?? s?? d?? d??
+            </div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="red white--text">확인</v-btn>
+            <v-btn outlined color="red">취소</v-btn>
+            <v-btn background-color="#9c27b0">취소</v-btn>
+          </v-card-actions>
+        </v-content>
+      </v-app>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el:'#app',
+        vuetify: new Vuetify()
+      })
+    </script>
 </body>
 </html>
