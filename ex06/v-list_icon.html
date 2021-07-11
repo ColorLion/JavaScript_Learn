@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-app-bar app color="blue" dark>
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                <v-toolbar-title>Molendamiro</v-toolbar-title>
+            </v-app-bar>
+            <v-content>
+                <v-container>
+                    <h1>Single</h1>
+                    <v-card>
+                        <v-list tow-line v-for="item in aList" v-bind:key="item.id">
+                            <!--항목을 하나씩 표시-->
+                            <v-list-item @click="">
+                                <v-list-item-avatar>
+                                    <v-icon :class="[item.icon_style]">{{ item.icon_name }}</v-icon:class>
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-action>
+                                    <v-btn icon>
+                                        <v-icon color="grey">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-list-item-action>
+                            </v-list-item>
+                        </v-list>
+                    </v-card>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+      el:'#app',
+      vuetify: new Vuetify(),
+      data() {
+          return{
+              //반복되는 항목은 json배열 데이터로 만들어 변환
+              aList: [{
+                  icon_name: 'account_balance',
+                  icon_style: 'red white--text',
+                  title: 'S16',
+              },
+              {
+                icon_name: 'photo',
+                icon_style: 'red white--text',
+                title: 'S17',
+              },
+              {
+                icon_name: 'photo',
+                icon_style: 'red white--text',
+                title: 'S18',
+              },
+              {
+                icon_name: 'photo',
+                icon_style: 'red white--text',
+                title: 'S19',
+              },
+              {
+                icon_name: 'photo',
+                icon_style: 'red white--text',
+                title: 'S20',
+              },
+              {
+                  //divider: false,
+                  icon_name: 'movie',
+                  icon_style: 'red white--text',
+                  title: 'S21',
+              },
+              ]
+          }
+      }
+    })
+</script>
+</html>
