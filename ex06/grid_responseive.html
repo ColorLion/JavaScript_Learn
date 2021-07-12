@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <!--앱바를 이용-->
+            <v-app-bar app flat color="primary">
+                <v-toolbar-title class="white--text mx-auto">Molendamiro</v-toolbar-title>
+            </v-app-bar>
+            <v-content>
+                <v-container>
+                    <v-row>
+                        <!--열 지정-->
+                        <v-col cols="12" sm="6">
+                            <h2 class="mb-3">About Molendamiro</h2>
+                            <p>모른다미로는 펌프잇업xx 성까 기록용 어플입니다.</p>
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                            <h2 class="mb-3">Molendamiro's Target</h2>
+                            <p1>1. 성과를 기록하고 싶은 사람</p1></br>
+                            <p1>2. 서열표를 찾아보기 귀찮은 사람</p1></br>
+                            <p1>3. 요즘 롤토 어려운 사람</p1></br>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-content>
+            <v-footer color="primary" dark>
+                <!--올해 연도 자동생성-->
+                <div class="mx-auto">Copyright &copy; {{ new Date().getFullYear() }}</div>
+            </v-footer>
+        </v-app>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+      el:'#app',
+      vuetify: new Vuetify()
+    })
+</script>
+</html>
