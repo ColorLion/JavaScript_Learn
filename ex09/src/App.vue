@@ -15,7 +15,7 @@
     </v-content>
 
     <v-footer color="secondary" fixed dark>
-      <div class="mx=auto">CODE-DESIGN.web.app</div>
+      <div class="mx-auto">CODE-DESIGN.web.app</div>
     </v-footer>
   </v-app>
 </template>

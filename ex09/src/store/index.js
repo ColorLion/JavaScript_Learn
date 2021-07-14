@@ -15,7 +15,7 @@ export default new Vuex.Store({
     fnSetData: function (state, payload){
       return state.sTitle = payload
     },
-    fnSetData: function (state, payload){
+    fnSetData1: function (state, payload){
       return state.sTitle1 = payload
     }
   },
