@@ -1,6 +1,6 @@
 {
-  "name": "카메라 갤러리",
-  "short_name": "카메라 갤러리",
+  "name": "구글-이메일 인증 로그인",
+  "short_name": "구글-이메일 인증 로그인",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -16,5 +16,6 @@
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "orientation": "#ffffff"
 }

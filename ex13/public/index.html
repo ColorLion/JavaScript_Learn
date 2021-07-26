@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- 상태 표시줄 테마 색상을 흰색으로 변경 -->
-    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>카메라 갤러리</title>
-    <!-- 구글 머티리얼 디자인 아이콘 추가-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+    <title>구글인증 로그인</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but ex11 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->

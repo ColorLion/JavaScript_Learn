@@ -1,33 +1,12 @@
 module.exports = {
-    pwa:{
-        workboxOptions: {
-            runtimeCaching: [{
-                urlPattern: /\.jpg$/,
-                handler: 'cacheFirst',
-                options:{
-                    cacheName: 'jpg-cache',
-                    expiration:{
-                        maxEntries: 10,
-                        maxAgeSeconds: 60 * 60 * 24 * 365
-                    }
-                }
-            },
-            {
-                urlPattern: /\.json$/,
-                handler: 'staleWhileRevalidate',
-                options:{
-                    cacheName:'json-cache',
-                    cacheableResponse: { statuses: [200] }
-                },
-            }
-        ],
-        }
-    },
-    devServer: {
-        disableHostCheck: true
-    },
-    
-    transpileDependencies: [
-      'vuetify'
-    ]
+  pwa: {
+    // 서비스워커를 코드로 수정하기 위해 InjectManifest 모드 사용
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: "src/service-worker.js"
+    }
+  },
+  devServer: {
+    disableHostCheck: true
+  }
 }
