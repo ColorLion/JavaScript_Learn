@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import VuePersistence, { VuexPersistence } from 'vuex-persist'
+import VuexPersistence from 'vuex-persist'
 import modProvider from './provider.js'
 import modCommon from './common.js'
 
